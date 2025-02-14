@@ -9,4 +9,5 @@
 007_sh_loader_aes_sleep180: shellcode loader aes256 pre sleep 180sec x64
 008_sh_loader_aes_ramcheck: shellcode loader aes256 if ram less than 4GB stop execution x64
 009_sh_loader_aes_regsearchvmray: shellcode loader aes256 search in registry if string is present vmray x64
+010_sh_loader_aes_uptimecheck: shellcode loader aes256 if uptime less than 5min stop execution x64
 ```
