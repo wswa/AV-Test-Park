@@ -4,6 +4,7 @@ cl.exe /nologo /Ox /MT /W0 /GS- /DNDEBUG /Tp main.cpp /link /OUT:out.exe /SUBSYS
 ```
 
 ```
+shellcode is msfstager https 4444 wslab.de
 001_sh_loader_aes: shellcode loader aes256 x64
 002_sh_loader_aes_apcsleep aes256 APCSleep Technique x64
 003_sh_loader_aes_earlybird aes256 EarlyBird Technique x64
@@ -14,4 +15,5 @@ cl.exe /nologo /Ox /MT /W0 /GS- /DNDEBUG /Tp main.cpp /link /OUT:out.exe /SUBSYS
 008_sh_loader_aes_ramcheck: shellcode loader aes256 if ram less than 4GB stop execution x64
 009_sh_loader_aes_regsearchvmray: shellcode loader aes256 search in registry if string is present vmray x64
 010_sh_loader_aes_uptimecheck: shellcode loader aes256 if uptime less than 5min stop execution x64
+011_sh_loader_cxor_domainjoindcheck: shellcode loader cxor shellcode is calc domainjoined x64
 ```
