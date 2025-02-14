@@ -7,4 +7,5 @@
 005_sh_loader_aes: shellcode loader aes256 domainjoinedcheck x64
 006_sh_loader_aes_sleep30: shellcode loader aes256 pre sleep 30sec x64
 007_sh_loader_aes_sleep180: shellcode loader aes256 pre sleep 180sec x64
+008_sh_loader_aes_ramcheck: shellcode loader aes256 if ram less than 4GB stop execution x64
 ```
