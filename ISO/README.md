@@ -1,5 +1,5 @@
 
-Create an ISO file with a stager in it
+Creates an ISO file with a stager in it
 
 ```
 mkdir iso_root
